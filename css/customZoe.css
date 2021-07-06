@@ -1,0 +1,191 @@
+/*exercise #1*/
+
+.unit-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+.hero-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.hero-unit-frontier .hero-image,
+.hero-unit-moon-exploration .hero-image {
+    width: auto;
+    background-size: auto 960px;
+    background-position: center top;
+}
+
+.hero-unit-frontier .hero-image {
+    height: 960px;
+    margin: 0 auto;
+    background-image: url(/images/final-frontier_large.jpg);
+    background-repeat: no-repeat;
+}
+
+
+/* Media queries */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx),
+(-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
+    .hero-unit-frontier .hero-image {
+        background-image: url("/images/final-frontier_large_2x.jpg");
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .hero-unit-frontier .hero-image {
+        background-image: url("/images/final-frontier_medium_2x.jpg");
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (max-width: 735px) and (min-resolution: 1.5dppx),
+only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .hero-unit-frontier .hero-image {
+        background-image: url("/images/final-frontier_small_2x.jpg");
+    }
+}
+
+
+/* exercise #2*/
+
+.timeline-wrap {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, calc(50% - 15px));
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    grid-auto-rows: minmax(15px, auto);
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.timeline-wrap .timeline-item {
+    margin: 0 auto;
+}
+
+.timeline-1 {
+    -ms-grid-row-span: 14;
+    grid-row-end: span 14;
+}
+
+.timeline-2 {
+    -ms-grid-row-span: 19;
+    grid-row-end: span 19;
+}
+
+.timeline-3 {
+    -ms-grid-row-span: 18;
+    grid-row-end: span 18;
+}
+
+.timeline-4 {
+    -ms-grid-row-span: 15;
+    grid-row-end: span 15;
+}
+
+.timeline-5 {
+    -ms-grid-row-span: 20;
+    grid-row-end: span 20;
+}
+
+.timeline-6 {
+    -ms-grid-row-span: 18;
+    grid-row-end: span 18;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 990px) {
+    .timeline-1 {
+        -ms-grid-row-span: 12;
+        grid-row-end: span 12;
+    }
+    .timeline-2 {
+        -ms-grid-row-span: 16;
+        grid-row-end: span 16;
+    }
+    .timeline-3 {
+        -ms-grid-row-span: 16;
+        grid-row-end: span 16;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .timeline-wrap {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+}
+
+
+/* exercise #3 */
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: none;
+}
+
+@media only screen and (min-width: 737px) {
+    .grid-third.grid-left,
+    .grid-third.grid-right {
+        width: 33.33%;
+        grid-column: auto;
+    }
+    .grid-two-third.grid-left,
+    .grid-two-third.grid-right {
+        width: 66.67%;
+        grid-column: auto;
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .hero-unit-frontier .hero-image,
+    .hero-unit-moon-exploration .hero-image {
+        height: 712px;
+        background-size: auto 712px;
+    }
+    .hero-unit-frontier .hero-image {
+        background-image: url(/images/final-frontier_medium.jpg);
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .hero-wrap {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .hero-unit-frontier,
+    .hero-unit-moon-exploration {
+        width: 100%;
+    }
+    .hero-copy {
+        width: 345px;
+    }
+    .hero-unit-frontier .hero-image,
+    .hero-unit-moon-exploration .hero-image {
+        height: 490px;
+        background-size: auto 490px;
+    }
+    .hero-unit-frontier .hero-image {
+        background-image: url(/images/final-frontier_small.jpg);
+    }
+}
